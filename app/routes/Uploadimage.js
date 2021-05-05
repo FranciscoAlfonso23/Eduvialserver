@@ -7,6 +7,7 @@ const multer= require('multer')
 const uploader=multer({storage})
 
 router.post('/login',uploader.single('file'),async(req,res)=>{
+  console.log("aqui");
     const userData = {
         email: req.body.email,
         password: req.body.password
