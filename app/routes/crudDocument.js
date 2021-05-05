@@ -13,7 +13,7 @@ router.post('/UpDocument',uploader.single('file'),async(req,res)=>{
         const newDocument = new Document({
             fileName:body.name,
             descripcion:body.descripcion,
-            urlFile:`http://localhost:4000/${file.filename}`
+            urlFile:`https://eduvialserver.herokuapp.com/${file.filename}`
         })
         await newDocument.save()
         res.json({
